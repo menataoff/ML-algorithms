@@ -1,7 +1,7 @@
 from scipy.stats import mode
 from scipy.spatial.distance import cdist
 
-class KNN:
+class mknKNN:
     def __init__(self, n_neighbours, metric):
         self.n_neighbours = n_neighbours
         self.metric = metric

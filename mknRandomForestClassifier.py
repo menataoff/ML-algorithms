@@ -2,7 +2,7 @@ import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 from scipy.stats import mode
 
-class RandomForestClassifierOnSKL():
+class mknRandomForestClassifier():
     def __init__(self, n_estimators = 100, max_features = 'sqrt', max_depth = 50, bootstrap = True):
         self.n_estimators = n_estimators
         self.max_features = max_features

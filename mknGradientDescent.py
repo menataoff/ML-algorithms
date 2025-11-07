@@ -1,7 +1,7 @@
 import numpy as np
 
 
-class GradientDescent:
+class mknGradientDescent:
     def __init__(self, learning_rate=0.01, max_iters=1000, tol=1e-5):
         self.learning_rate = learning_rate
         self.max_iters = max_iters

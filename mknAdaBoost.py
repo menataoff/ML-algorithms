@@ -1,7 +1,7 @@
 from sklearn.tree import DecisionTreeClassifier
 import numpy as np
 
-class AdaBoostMKN:
+class mknAdaBoost:
     def __init__(self, n_estimators = 50):
         self.n_estimators = n_estimators
         self.alphas = []
@@ -18,14 +18,14 @@ class AdaBoostMKN:
             predictions = classifier.predict(Xtrain)
             incorrect = (predictions != ytrain)
             error = np.sum(self.weights[incorrect])  # ε_t
-            if error >= 0.5:  # Классификатор хуже случайного
-                break  # Прекращаем обучение
+            if error >= 0.5:
+                break
 
             if error <= 1e-10:  # Идеальный классификатор
                 alpha = 100.0
             else:
-                alpha = 0.5 * np.log((1 - error) / (error + 1e-10))  # +ϵ для стабильности
-            self.weights *= np.exp(alpha * incorrect)  # Увеличиваем веса ошибочных объектов
+                alpha = 0.5 * np.log((1 - error) / (error + 1e-10))
+            self.weights *= np.exp(alpha * incorrect)
             self.weights /= np.sum(self.weights)
             self.weights_history.append(self.weights)
             self.classifiers.append(classifier)

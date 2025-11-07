@@ -1,7 +1,7 @@
 from sklearn.tree import DecisionTreeRegressor
 import numpy as np
 
-class GradientBoostingRegressionMKN:
+class mknGradientBoostingRegression:
     def __init__(self, learning_rate=0.1, M = 200, max_depth = 6):
         self.learning_rate = learning_rate
         self.M = M

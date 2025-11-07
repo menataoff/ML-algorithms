@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.spatial.distance import cdist
 
-class KMeans:
+class mknKMeans:
     def __init__(self, n_clusters = 3, tol = 1e-4, random_state = 335, max_iter = 100):
         self.n_clusters = n_clusters
         self.tol = tol
